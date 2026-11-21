@@ -1,16 +1,141 @@
-# React + Vite
+# Contact Directory Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Contact Directory Dashboard built with **React.js and Vite**. The application provides a clean interface to organize and manage contacts through an interactive dashboard.
 
-Currently, two official plugins are available:
+The project focuses on building a structured, reusable, and responsive frontend with an emphasis on user experience and modern React development practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### Dashboard & Layout
+- Clean and modern dashboard interface.
+- Sidebar navigation for different sections.
+- Responsive layout for different screen sizes.
+- Organized contact management interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Contact Management
+- Display contacts using reusable React components.
+- Contact cards with profile pictures, names, and company information.
+- Interactive three-dot menu for individual contact cards.
+- Dropdown menu with a Delete option.
+- Contact action buttons for calling, messaging, and video communication.
 
-## Expanding the ESLint configuration
+### User Interface
+- Responsive contact grid layout.
+- Modern card-based design.
+- Interactive buttons with hover effects.
+- Lucide icons for a consistent visual experience.
+- Custom CSS styling and animations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend library |
+| Vite | Development server and build tool |
+| JavaScript (ES6+) | Application logic |
+| CSS3 | Styling and responsive layouts |
+| Lucide React | Icons |
+| Git & GitHub | Version control |
+
+## 📂 Project Structure
+
+```text
+contact-directory/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── Contact_card.jsx
+│   │   └── ...
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+*The structure above represents the intended organization; adjust it to match the actual files in your repository.*
+
+## ⚙️ Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd contact-directory
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal to view the application.
+
+## 📌 Current Development Status
+
+The project is actively under development.
+
+**Implemented**
+- React application setup using Vite.
+- Dashboard and sidebar layout.
+- Contact card component.
+- Contact grid layout.
+- Responsive CSS styling.
+- Interactive contact dropdown menu.
+
+**Planned Improvements**
+- Fetch contacts from an external API.
+- Implement contact search and filtering.
+- Add new contact functionality.
+- Implement actual contact deletion.
+- Add grid and list view switching.
+- Add dedicated dashboard sections.
+- Improve loading and error states for API requests.
+
+## 🎯 Project Goals
+
+The main goal of this project is to strengthen practical frontend development skills by working with:
+
+- React components and props.
+- React Hooks, especially `useState` and `useEffect`.
+- Conditional rendering.
+- Rendering dynamic lists using `map()`.
+- Managing application state.
+- API integration and asynchronous data fetching.
+- Responsive UI development.
+
+## 👨‍💻 Author
+
+**Aditya Nath Tiwari**
+
+B.Tech CSE Student | Aspiring Software Engineer | Backend Developer
+
+- GitHub: [@calladitya](https://github.com/calladitya)
+
+---
+
+⭐ If you find this project interesting, consider giving it a star!
