@@ -1,0 +1,84 @@
+.counter-card {
+  width: min(100% - 32px, 480px);
+  box-sizing: border-box;
+  margin: 32px auto 24px;
+  padding: 32px;
+  color: #172033;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #f4f7ff);
+  border: 1px solid #e5eaf5;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(43, 62, 110, 0.1);
+}
+
+.counter-eyebrow,
+.todo-eyebrow {
+  color: #6574cd;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.counter-title {
+  margin: 10px 0 4px;
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+.counter-value {
+  display: grid;
+  width: 132px;
+  height: 132px;
+  place-items: center;
+  margin: 24px auto;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7669ed, #4f8cf7);
+  border: 8px solid #e9eaff;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(100, 111, 224, 0.25);
+}
+
+.counter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.counter-button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.counter-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(39, 50, 95, 0.14);
+}
+
+.counter-button:focus-visible,
+.todo-card button:focus-visible,
+.todo-input:focus-visible,
+.todo-checkbox:focus-visible {
+  outline: 3px solid #a9b4ff;
+  outline-offset: 3px;
+}
+
+.counter-button--primary { color: white; background: #6558e8; }
+.counter-button--secondary { color: #35405c; background: #e9edf7; }
+.counter-button--secondary:disabled { opacity: 0.45; cursor: not-allowed; }
+.counter-button--reset { color: #a14859; background: #fff0f1; }
+
+@media (max-width: 480px) {
+  .counter-card { padding: 26px 18px; }
+  .counter-actions { gap: 8px; }
+  .counter-button { padding: 0 13px; }
+}

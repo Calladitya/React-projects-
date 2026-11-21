@@ -1,0 +1,129 @@
+.todo-card {
+  width: min(100% - 32px, 620px);
+  box-sizing: border-box;
+  margin: 0 auto 40px;
+  padding: 32px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #e5eaf5;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(43, 62, 110, 0.1);
+}
+
+.todo-heading h1 {
+  margin: 9px 0 5px;
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+  letter-spacing: -0.055em;
+}
+
+.todo-subtitle { margin: 0; color: #7b8499; }
+
+.todo-entry {
+  display: flex;
+  gap: 10px;
+  margin: 26px 0 18px;
+}
+
+.todo-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  color: #172033;
+  font: inherit;
+  background: #f7f8fc;
+  border: 1px solid #e2e6f0;
+  border-radius: 12px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.todo-input:focus { border-color: #786deb; box-shadow: 0 0 0 4px #786deb1c; outline: none; }
+.todo-input::placeholder { color: #9ba3b4; }
+
+.todo-add {
+  min-height: 48px;
+  padding: 0 21px;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #7669ed, #5488ee);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.todo-add:hover { transform: translateY(-2px); box-shadow: 0 8px 18px #6558e83b; }
+
+.todo-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  color: #717b91;
+  font-size: 0.82rem;
+  background: #f6f7fc;
+  border: 1px solid #edf0f7;
+  border-radius: 12px;
+}
+
+.todo-stat strong { color: #554bd0; font-size: 1.05rem; }
+
+.todo-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 13px 14px;
+  background: #fff;
+  border: 1px solid #e9ecf4;
+  border-radius: 14px;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.todo-item:hover { background: #fafaff; border-color: #d9dcf7; }
+.todo-text { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.todo-item.is-completed .todo-text { color: #969eae; text-decoration: line-through; }
+.todo-checkbox { width: 18px; height: 18px; accent-color: #6558e8; cursor: pointer; }
+
+.todo-delete {
+  padding: 7px 10px;
+  color: #b14c5d;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #fff1f2;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.todo-delete:hover { background: #ffe0e4; }
+
+@media (max-width: 540px) {
+  .todo-card { padding: 24px 18px; }
+  .todo-entry { gap: 8px; }
+  .todo-add { padding: 0 15px; }
+  .todo-stats { gap: 6px; }
+  .todo-stat { flex-direction: column; align-items: flex-start; padding: 10px; font-size: 0.74rem; }
+  .todo-item { gap: 8px; padding: 11px 10px; }
+}
