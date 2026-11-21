@@ -48,8 +48,26 @@
   transition: color 150ms ease, background 150ms ease, border-color 150ms ease, padding 150ms ease;
 }
 
+.Api_Fetching .Sidebar li .Sidebar_contact {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  color: #c5cce0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 550;
+  text-align: left;
+  cursor: pointer;
+  transition: color 150ms ease, background 150ms ease, border-color 150ms ease, padding 150ms ease;
+}
+
 .Api_Fetching .Sidebar li a:hover,
-.Api_Fetching .Sidebar li a:focus-visible {
+.Api_Fetching .Sidebar li a:focus-visible,
+.Api_Fetching .Sidebar li .Sidebar_contact:hover,
+.Api_Fetching .Sidebar li .Sidebar_contact:focus-visible {
   padding-left: 16px;
   color: #fff;
   background: rgba(112, 132, 255, 0.17);

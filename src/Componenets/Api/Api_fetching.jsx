@@ -3,6 +3,7 @@ import {useState} from 'react'
 import react from 'react'
 import './Api_fetching.css'
 import Sidebar from './Sidebar.jsx';
+import Contact_card from './Contact_card.jsx';
 import {
   Star,
   Bell,
@@ -18,6 +19,12 @@ function Api_fetching(){
     const [language, setLanguage] = useState('EN');
     const [showLanguages, setShowLanguages] = useState(false);
     const [slider,setslider] = useState(false);
+    const [activePage, setActivePage] = useState(null);
+
+    const handleNavigate = (page) => {
+      setActivePage(page);
+      setslider(false);
+    };
 
     return (
         <section className="Api_Fetching">
@@ -85,7 +92,8 @@ function Api_fetching(){
                     </li>
                 </ul>
             </nav>
-          <Sidebar slider={slider} /> 
+          <Sidebar slider={slider} onNavigate={handleNavigate} />
+          {activePage === 'contact' && <Contact_card />}
           
         </section>
     )
