@@ -14,14 +14,18 @@
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Search input */
-.Contact_list > input {
+.Contact_search {
+  position: relative;
   flex: 1 1 300px;
   min-width: 220px;
   max-width: 390px;
-  height: 46px;
   margin-right: auto;
-  padding: 0 18px;
+}
+
+.Contact_search input {
+  width: 100%;
+  height: 46px;
+  padding: 0 44px;
   box-sizing: border-box;
   color: #3d4655;
   background: #fff;
@@ -32,13 +36,44 @@
   outline: none;
 }
 
-.Contact_list > input::placeholder {
+.Contact_search input::placeholder {
   color: #98a1b2;
 }
 
-.Contact_list > input:focus {
+.Contact_search input:focus {
   border-color: #9b82d9;
   box-shadow: 0 0 0 4px rgba(139, 116, 220, 0.12);
+}
+
+.Contact_search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #98a1b2;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.Contact_clear-search {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  padding: 0;
+  color: #747d8e;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.Contact_clear-search:hover {
+  color: #5d48a4;
+  background: #f2effa;
 }
 
 /* New contact button */
@@ -63,12 +98,178 @@
   transform: translateY(-1px);
 }
 
+.Contact_results {
+  width: 100%;
+}
+
+.Contact_results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.Contact_results-heading h2 {
+  margin: 0;
+  color: #252d3b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Contact_results-heading > span {
+  color: #8992a2;
+  font-size: 13px;
+}
+
+.Contact_search-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 16px;
+  color: #71619e;
+  font-size: 13px;
+}
+
+.Contact_search-status svg {
+  flex: 0 0 auto;
+  animation: searchSpin 900ms linear infinite;
+}
+
 /* Contact grid */
 .Contact_grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   width: 100%;
+}
+
+.Contact_skeleton-card {
+  display: flex;
+  position: relative;
+  min-height: 260px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 24px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 18px;
+}
+
+.Contact_skeleton-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.75) 48%, transparent 76%);
+  content: '';
+  transform: translateX(-100%);
+  animation: skeletonShimmer 1.35s ease-in-out infinite;
+}
+
+.Contact_skeleton-card > span {
+  display: block;
+  background: #eceef4;
+  border-radius: 999px;
+}
+
+.Contact_skeleton-menu {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 24px;
+  height: 8px;
+}
+
+.Contact_skeleton-avatar {
+  width: 106px;
+  height: 106px;
+  margin-bottom: 15px;
+  border: 6px solid #f3f4f8;
+  border-radius: 50%;
+}
+
+.Contact_skeleton-name {
+  width: 68%;
+  height: 15px;
+  margin-bottom: 9px;
+}
+
+.Contact_skeleton-company {
+  width: 46%;
+  height: 11px;
+}
+
+.Contact_skeleton-actions {
+  width: 138px;
+  height: 38px;
+  margin-top: 21px;
+  background: #f1eff8 !important;
+}
+
+@keyframes skeletonShimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes searchSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Contact_empty-state {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #dfe3ec;
+  border-radius: 16px;
+}
+
+.Contact_empty-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  color: #8973c2;
+  background: #f2effa;
+  border-radius: 50%;
+}
+
+.Contact_empty-state h3 {
+  margin: 14px 0 5px;
+  color: #252d3b;
+  font-size: 16px;
+}
+
+.Contact_empty-state p {
+  margin: 0;
+  color: #8992a2;
+  font-size: 13px;
+}
+
+.Contact_empty-state button {
+  margin-top: 16px;
+  padding: 8px 13px;
+  color: #7159b5;
+  background: #f2effa;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.Contact_empty-state button:hover {
+  background: #e9e3f7;
 }
 
 /* Individual card */
@@ -246,7 +447,7 @@
     padding: 18px 10px;
   }
 
-  .Contact_list > input {
+  .Contact_search {
     flex-basis: 100%;
     max-width: none;
   }
