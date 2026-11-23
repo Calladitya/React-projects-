@@ -8,7 +8,14 @@ function Sidebar({ slider, onNavigate }) {
       <div className="Api_fetching">api_fetching</div>
 
       <ul>
-        <li><a href="/Dashboard">Dashboard</a></li>
+        <li>
+          <button type="button"
+          className="Dashboard"
+          onClick={()=>onNavigate('Dashboard')}
+          >
+            Dashboard
+          </button>
+          </li>
         <li><a href="/Project">Project</a></li>
         <li>
           <button

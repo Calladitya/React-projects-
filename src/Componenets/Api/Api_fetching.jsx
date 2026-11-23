@@ -3,6 +3,7 @@ import {useState} from 'react'
 import react from 'react'
 import './Api_fetching.css'
 import Sidebar from './Sidebar.jsx';
+import Dashboard from './Dashboard';
 import Contact_card from './Contact_card.jsx';
 import {
   Star,
@@ -94,6 +95,7 @@ function Api_fetching(){
             </nav>
           <Sidebar slider={slider} onNavigate={handleNavigate} />
           {activePage === 'contact' && <Contact_card />}
+          {activePage === 'Dashboard' && <Dashboard/>}
           
         </section>
     )

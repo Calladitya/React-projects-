@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
+
 import {
   Phone,
   MessageCircle,
@@ -25,7 +26,6 @@ function Contact_card() {
     if (trimmedSearch === appliedSearch) {
       return undefined;
     }
-
     const timeoutId = window.setTimeout(() => {
       setAppliedSearch(trimmedSearch);
     }, 550);
@@ -182,6 +182,7 @@ function Contact_card() {
           </div>
         )}
       </div>
+      
 
     </section>
   );
