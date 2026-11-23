@@ -48,7 +48,7 @@
   transition: color 150ms ease, background 150ms ease, border-color 150ms ease, padding 150ms ease;
 }
 
-.Api_Fetching .Sidebar li .Sidebar_contact {
+.Api_Fetching .Sidebar li .Sidebar_link {
   width: 100%;
   min-height: 44px;
   padding: 0 12px;
@@ -66,8 +66,8 @@
 
 .Api_Fetching .Sidebar li a:hover,
 .Api_Fetching .Sidebar li a:focus-visible,
-.Api_Fetching .Sidebar li .Sidebar_contact:hover,
-.Api_Fetching .Sidebar li .Sidebar_contact:focus-visible {
+.Api_Fetching .Sidebar li .Sidebar_link:hover,
+.Api_Fetching .Sidebar li .Sidebar_link:focus-visible {
   padding-left: 16px;
   color: #fff;
   background: rgba(112, 132, 255, 0.17);
@@ -75,7 +75,8 @@
   outline: none;
 }
 
-.Api_Fetching .Sidebar li a:focus-visible {
+.Api_Fetching .Sidebar li a:focus-visible,
+.Api_Fetching .Sidebar li button:focus-visible {
   box-shadow: inset 0 0 0 2px rgba(157, 170, 255, 0.55);
 }
 

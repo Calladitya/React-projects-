@@ -1,10 +1,13 @@
 
-import {useState} from 'react'
-import react from 'react'
+import { useState } from 'react';
 import './Api_fetching.css'
 import Sidebar from './Sidebar.jsx';
-import Dashboard from './Dashboard';
+import Dashboard from './Dashboard.jsx';
 import Contact_card from './Contact_card.jsx';
+import Projects from './Projects.jsx';
+import Analytics from './Analytics.jsx';
+import Calendar from './Calendar.jsx';
+import Messages from './Messages.jsx';
 import {
   Star,
   Bell,
@@ -20,7 +23,15 @@ function Api_fetching(){
     const [language, setLanguage] = useState('EN');
     const [showLanguages, setShowLanguages] = useState(false);
     const [slider,setslider] = useState(false);
-    const [activePage, setActivePage] = useState(null);
+    const [activePage, setActivePage] = useState('Dashboard');
+    const pageTitles = {
+      Dashboard: 'Dashboard',
+      projects: 'Projects',
+      contact: 'Contacts',
+      analytics: 'Analytics',
+      calendar: 'Calendar',
+      messages: 'Messages',
+    };
 
     const handleNavigate = (page) => {
       setActivePage(page);
@@ -37,8 +48,8 @@ function Api_fetching(){
                   <Menu size={24} />
             </button>
 
-                <div classNamme="Api_Fetching">
-                    Contacts
+                <div className="navbar-title">
+                    {pageTitles[activePage]}
                 </div>
 
                 <div className="NavInput">
@@ -95,7 +106,11 @@ function Api_fetching(){
             </nav>
           <Sidebar slider={slider} onNavigate={handleNavigate} />
           {activePage === 'contact' && <Contact_card />}
-          {activePage === 'Dashboard' && <Dashboard/>}
+          {activePage === 'Dashboard' && <Dashboard />}
+          {activePage === 'projects' && <Projects />}
+          {activePage === 'analytics' && <Analytics />}
+          {activePage === 'calendar' && <Calendar />}
+          {activePage === 'messages' && <Messages />}
           
         </section>
     )

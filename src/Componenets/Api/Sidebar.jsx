@@ -9,26 +9,35 @@ function Sidebar({ slider, onNavigate }) {
 
       <ul>
         <li>
-          <button type="button"
-          className="Dashboard"
-          onClick={()=>onNavigate('Dashboard')}
-          >
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('Dashboard')}>
             Dashboard
           </button>
-          </li>
-        <li><a href="/Project">Project</a></li>
+        </li>
         <li>
-          <button
-            type="button"
-            className="Sidebar_contact"
-            onClick={() => onNavigate('contact')}
-          >
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('projects')}>
+            Projects
+          </button>
+        </li>
+        <li>
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('contact')}>
             Contact
           </button>
         </li>
-        <li><a href="/Analytics">Analytics</a></li>
-        <li><a href="/Calendar">Calendar</a></li>
-        <li><a href="/Messages">Messages</a></li>
+        <li>
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('analytics')}>
+            Analytics
+          </button>
+        </li>
+        <li>
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('calendar')}>
+            Calendar
+          </button>
+        </li>
+        <li>
+          <button type="button" className="Sidebar_link" onClick={() => onNavigate('messages')}>
+            Messages
+          </button>
+        </li>
       </ul>
     </section>
   );

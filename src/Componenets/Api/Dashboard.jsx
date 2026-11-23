@@ -26,7 +26,7 @@ function Dashboard(){
             <div className="Users_Box">
              <div><Users/></div>
               <div className="total_users">
-                user
+                Users
                </div>
               <div className="total_count">430</div>
               <div className="Total_days">Last 30 days</div>

@@ -56,7 +56,7 @@
   stroke-width: 2;
 }
 
-.Api_Fetching .navbar > div:first-child {
+.Api_Fetching .navbar-title {
   flex: 0 0 auto;
   color: #263653;
   font-size: 1.2rem;
